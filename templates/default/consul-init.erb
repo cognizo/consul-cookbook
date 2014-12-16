@@ -24,7 +24,7 @@ CMD="<%= @consul_binary %> agent -config-dir <%= @config_dir %>"
 NAME="consul"
 
 PIDFILE="/var/run/$NAME.pid"
-LOGFILE="/var/log/$NAME.log"
+LOGFILE="<%= node['consul']['service_log_file'] %>"
 
 get_pid() {
     cat "$PIDFILE"

@@ -70,6 +70,8 @@ else
   default['consul']['service_group'] = 'root'
 end
 
+default['consul']['service_log_file'] = '/var/log/consul.log'
+
 default['consul']['ports'] = {
   'dns'      => 8600,
   'http'     => 8500,
