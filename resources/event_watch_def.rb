@@ -27,7 +27,7 @@ def path
   ::File.join(node['consul']['config_dir'], "event-watch-#{name}.json")
 end
 
-def to_json
+def to_config_json
   JSON.pretty_generate(to_hash)
 end
 
@@ -37,7 +37,7 @@ def to_hash
       {
         type: 'event',
         name: name,
-        handler: handler 
+        handler: handler
       }
     ]
   }

@@ -28,7 +28,7 @@ action :create do
       user node['consul']['service_user']
       group node['consul']['service_group']
       mode 0600
-      content new_resource.to_json
+      content new_resource.to_config_json
       action :create
     end
   end

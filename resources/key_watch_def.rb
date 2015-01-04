@@ -28,7 +28,7 @@ def path
   ::File.join(node['consul']['config_dir'], "key-watch-#{name}.json")
 end
 
-def to_json
+def to_config_json
   JSON.pretty_generate(to_hash)
 end
 
@@ -38,7 +38,7 @@ def to_hash
       {
         type: 'key',
         key: key,
-        handler: handler 
+        handler: handler
       }
     ]
   }

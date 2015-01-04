@@ -31,7 +31,7 @@ def path
   ::File.join(node['consul']['config_dir'], "check-#{name}.json")
 end
 
-def to_json
+def to_config_json
   JSON.pretty_generate(to_hash)
 end
 
