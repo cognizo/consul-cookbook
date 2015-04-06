@@ -43,6 +43,8 @@ default['consul']['checksums'] = {
 }
 default['consul']['source_revision'] = 'master'
 
+default['consul']['gomaxprocs'] = node['cpu']['total']
+
 # Service attributes
 default['consul']['service_mode'] = 'bootstrap'
 # In the cluster mode, set the default cluster size to 3
